@@ -1,2 +1,2 @@
-# tqs_hw1
+# TQS HW1
 TQS Individual project
