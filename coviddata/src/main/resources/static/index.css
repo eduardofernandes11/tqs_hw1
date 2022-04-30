@@ -1,0 +1,183 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    height: 12%;
+    background-color: rgb(30, 107, 151);
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 100;
+    font-size: 35px;
+    line-height: 90px;
+}
+
+.info {
+    margin-top: 100px;
+    white-space: nowrap;
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 5%;
+    height: 5%;
+}
+
+.dropdown-content {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 623px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content2 {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 623px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    flex: 0 0 175px;
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    flex: 0 0 175px;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown-content2 a:hover {background-color: #ddd}
+
+
+.show {display:flex;}
+
+.city-div {
+    margin-top: 35px;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.content {
+    width: 80%;
+    height: 80%;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.deaths {
+    height: 200px;
+    width: 375px;
+    background-color: rgb(255, 32, 32);
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 18px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.deaths h2{
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 60px;
+    margin: 0;
+}
+
+.deaths h3{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight:900;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.recov {
+    height: 200px;
+    width: 375px;
+    background-color: rgb(37, 193, 32);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.recov h2{
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 60px;
+    margin: 0;
+}
+
+.recov h3{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight:900;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.activ {
+    height: 200px;
+    width: 375px;
+    background-color: rgb(219, 187, 44);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.activ h2{
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 60px;
+    margin: 0;
+}
+
+.activ h3{
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight:900;
+    margin: 0;
+    padding-top: 10px;
+}

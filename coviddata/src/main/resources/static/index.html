@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Covid Statistics</title>
+        <link rel="stylesheet" href="./index.css" >
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    </head>
+    <body onload="getCountries()">
+        <div class="navbar">
+            <h2 class="title">Covid Statistics</h2>
+            <h3 style="font-size: 20px; text-align: center; font-weight: 100; padding-bottom: 10px;">First individual assignment for TQS</h3>
+        </div>
+        <div class="info">
+            <Row>
+                <h3 style="display: inline-block; margin-left: 100px;">First, select a country from the list:</h3>
+                <div class="dropdown" style="display: inline-block; margin-left: 20px;">
+                    <button id="button" onclick="myFunction()" class="dropbtn">Country List</button>
+                    <div id="myDropdown" class="dropdown-content">
+                    </div>
+                </div>
+                <h4 id="country" style="display: inline-block; margin-left: 40px;"></h4>
+                <h3 style="display: inline-block; margin-left: 100px;">And then, select a city from the list:</h3>
+                <div class="dropdown" style="display: inline-block; margin-left: 20px;">
+                    <button id="button" onclick="myFunctionForCity()" class="dropbtn">City List</button>
+                    <div id="myDropdown2" class="dropdown-content2">
+                    </div>
+                </div>
+                <h4 id="city" style="display: inline-block; margin-left: 40px;"></h4>
+                <h2 style="display: inline-block; margin-left: 8rem;">Or</h2>
+                <form name="myForm" style="display: inline-block; ">
+                    <h3 style="display: inline-block; margin-left: 8rem;">Insert the city name pretended:</h3>
+                    <input id="input" name="city" type="text" style="margin-left: 15px;">
+                </form>
+            </Row>
+            <button id="submitBtn" class="dropbtn" style="display: block; margin-left: 46.5%; margin-top: 40px;" onclick="buttonClick()">Get statistics</button>
+        </div>
+        <div id="city-div" class="city-div">
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+    <script>
+        var country = document.getElementById("country");
+        var city = document.getElementById("city");
+        var input = document.getElementById("input");
+        function buttonClick(){
+            var inpt = document.forms["myForm"]["city"].value;
+            if (inpt!=""){
+                getCity(inpt);
+            }
+            else if(city.innerText!=""){
+                getCity(city.innerText);
+            }
+
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function myFunctionForCity() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+            getCities(country.innerText);
+        }
+
+            // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+                var i;
+                for (i = 0; i < dropdowns2.length; i++) {
+                    var openDropdown = dropdowns2[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                input.value = "";
+            }
+        }
+
+        var btn = document.getElementById("button");
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var j;
+        for (j=0; j< dropdowns.length; j++){
+            var clickDropdown = dropdowns[j];
+            clickDropdown.addEventListener('click', function(e) {
+                e = e || window.event;
+                var target = e.target || e.srcElement,
+                text = target.textContent || target.innerText;   
+                country.innerText = text;
+            }, false);
+        }
+
+        var dropdowns2 = document.getElementsByClassName("dropdown-content2");
+        var jj;
+        for (jj=0; jj< dropdowns2.length; jj++){
+            var clickDropdown = dropdowns2[jj];
+            clickDropdown.addEventListener('click', function(e) {
+                e = e || window.event;
+                var target = e.target || e.srcElement,
+                text = target.textContent || target.innerText;   
+                city.innerText = text;
+                console.log(text);
+            }, false);
+        }
+
+        input.addEventListener('click', function() {
+            country.innerText = "";
+            city.innerText = "";
+        });
+    </script>
+</html>
