@@ -16,6 +16,6 @@ public class CityTest {
         assertEquals(23145, city.getDeaths());
         assertEquals(3412431, city.getRecovered());
         assertEquals(423423, city.getActive());
-        assertEquals(0.0012, city.getFatality_rate());
+        assertEquals(0.0012, city.getFatalityRate());
     }
 }

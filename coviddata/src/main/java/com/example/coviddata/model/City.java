@@ -17,7 +17,7 @@ public class City {
     private int deaths;
     private int recovered;
     private int active;
-    private double fatality_rate;
+    private double fatalityRate;
 
 	public City(String name){
 		this.name = name;
@@ -31,7 +31,7 @@ public class City {
         this.deaths = deaths;
         this.recovered =recovered;
         this.active = active;
-        this.fatality_rate = fatality_rate;
+        this.fatalityRate = fatality_rate;
     }
 
     public Long getId() {
@@ -98,12 +98,12 @@ public class City {
 		this.active = active;
 	}
 
-	public double getFatality_rate() {
-		return this.fatality_rate;
+	public double getFatalityRate() {
+		return this.fatalityRate;
 	}
 
-	public void setFatality_rate(double fatality_rate) {
-		this.fatality_rate = fatality_rate;
+	public void setFatalityRate(double fatalityRate) {
+		this.fatalityRate = fatalityRate;
 	}
 
 

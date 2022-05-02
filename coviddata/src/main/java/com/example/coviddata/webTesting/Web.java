@@ -1,5 +1,5 @@
 package com.example.coviddata.webTesting;
 
-public class Web {
+public interface Web {
     
 }

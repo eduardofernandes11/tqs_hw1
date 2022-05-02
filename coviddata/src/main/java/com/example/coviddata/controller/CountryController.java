@@ -1,6 +1,5 @@
 package com.example.coviddata.controller;
 
-import com.example.coviddata.model.Country;
 import com.example.coviddata.model.City;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,11 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.coviddata.service.CountryService;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.HashMap;
 
 @RestController

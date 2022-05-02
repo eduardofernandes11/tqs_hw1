@@ -65,7 +65,6 @@ public class CityCache {
             @Override
             public void run(){
                 while (true){
-
                     for(String key: cacheCityMap.keySet()){
                         if(timeToLive.get(key) < System.currentTimeMillis()){
                             deleteValue(key);
@@ -83,6 +82,11 @@ public class CityCache {
         };
         thread.start();
         return thread;
+    }
+
+    public void cacheTimer(String key, long time){
+        this.timeToLive.remove(key);
+        this.timeToLive.put(key, time);
     }
 
     public void clearCache(){

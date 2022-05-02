@@ -36,48 +36,4 @@ public class WebTest {
         TimeUnit.SECONDS.sleep(1);
         assertEquals("City: Washington", browser.findElement(By.id("city-name")).getText());
     }
-
-    /*
-    @Test
-    void searchCityByLatAndLon() {
-        browser.get("http://127.0.0.1:8000/");
-
-        JavascriptExecutor js = (JavascriptExecutor) browser;
-        js.executeScript("window.scrollBy(0,1000)");
-
-        browser.manage().window().setSize(new Dimension(1116, 698));
-        try {
-            if (browser.findElements(By.id("searchBtn2")).size() <= 0 && !browser.findElement(By.id("searchBtn2")).isDisplayed()) {
-                WebDriverWait wait2 = new WebDriverWait(browser, 120);
-                wait2.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("searchBtn2"))));
-                browser.findElement(By.id("latitude")).click();
-                browser.findElement(By.id("latitude")).sendKeys("40.64427");
-                browser.findElement(By.id("longitude")).click();
-                browser.findElement(By.id("longitude")).sendKeys("-8.64554");
-                browser.findElement(By.id("searchBtn2")).click();
-                assertEquals("Name: \"Aveiro\"", browser.findElement(By.id("name2")).getText());
-            }
-        } catch (StaleElementReferenceException e) {
-            return;
-        }
-    }
-
-    @Test
-    void searchCacheDetails() {
-        browser.get("http://127.0.0.1:8000/");
-        JavascriptExecutor js = (JavascriptExecutor) browser;
-        js.executeScript("window.scrollBy(0,1500)");
-
-        try {
-            if (browser.findElements(By.id("searchBtn3")).size() <= 0 && !browser.findElement(By.id("searchBtn3")).isDisplayed()) {
-                WebDriverWait wait2 = new WebDriverWait(browser, 120);
-                wait2.until(ExpectedConditions.visibilityOf(browser.findElement(By.id("searchBtn3"))));
-                browser.findElement(By.id("searchBtn3")).click();
-                assertEquals("hits: 0", browser.findElement(By.id("hits")).getText());
-            }
-        } catch (StaleElementReferenceException e) {
-            return;
-        }
-    }
-    */
 }

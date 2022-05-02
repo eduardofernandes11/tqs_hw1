@@ -1,14 +1,11 @@
 package com.example.coviddata.service;
 
-//import airquality.cache.CityTTLCache;
-import com.example.coviddata.model.Country;
 import com.example.coviddata.model.City;
 import com.example.coviddata.cache.CityCache;
 import com.example.coviddata.cache.CountryCache;
 
 import org.apache.http.client.utils.URIBuilder;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.apache.http.HttpEntity;
@@ -24,10 +21,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Service
 @Transactional
@@ -93,7 +86,7 @@ public class CountryServiceImpl implements CountryService{
         JSONObject responseJson =  new JSONObject(response);
         System.out.println(responseJson);
 
-        if(responseJson.get("data").toString() == ""){
+        if(responseJson.get("data").toString().equals("")){
             return null;
         }
 
@@ -118,7 +111,7 @@ public class CountryServiceImpl implements CountryService{
         JSONObject responseJson =  new JSONObject(response);
         System.out.println(responseJson);
 
-        if(responseJson.get("data").toString() == ""){
+        if(responseJson.get("data").toString().equals("")){
             return null;
         }
 
@@ -151,7 +144,7 @@ public class CountryServiceImpl implements CountryService{
 
         JSONObject responseJson =  new JSONObject(response);
 
-        if(responseJson.get("data").toString() == ""){
+        if(responseJson.get("data").toString().equals("")){
             return null;
         }
 

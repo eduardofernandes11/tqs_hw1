@@ -89,7 +89,7 @@ function show_data_city(data){
         else if(cls[0]=="recovered"){
             recovered = cls[1];
         }
-        else if(cls[0]=="fatality_rate"){
+        else if(cls[0]=="fatalityRate"){
             fat = cls[1];
         }
     }
